@@ -5,10 +5,10 @@
 //# of this license document, but changing it is not allowed.
 //#
 
-#include "CQtDeployerServer.h"
+#include "CQtServer.h"
 
 
-namespace CQtDeployerServer {
+namespace CQT {
 
 bool init() {
     initCQtDeployerServerResources();

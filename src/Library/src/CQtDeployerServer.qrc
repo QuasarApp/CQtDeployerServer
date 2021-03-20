@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>CQtDeployerServerModule/qmldir</file>
-        <file>CQtDeployerServerModule/CQtDeployerServer.qml</file>
-    </qresource>
-</RCC>

@@ -5,12 +5,10 @@
 //# of this license document, but changing it is not allowed.
 //#
 
-#include "CQtDeployerServer_global.h"
+#include "CQtServer_global.h"
+inline void initCQtDeployerServerResources() { Q_INIT_RESOURCE(CQT); }
 
-namespace CQtDeployerServer {
-
-inline void initCQtDeployerServerResources() { Q_INIT_RESOURCE(CQtDeployerServer); }
-
+namespace CQT {
 
 bool CQtDeployerServer_EXPORT init();
 
