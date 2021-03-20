@@ -1,5 +1,6 @@
 # CQtDeployerServer
-This is temp repository for solve the task 415 of The CQtDeployer.
+This is temp repository for solve the [task 415](https://github.com/QuasarApp/CQtDeployer/issues/415) of The [CQtDeployer](https://github.com/QuasarApp/CQtDeployer).
+
 After finishing of the developing, this repository will be unite with the main repository of the CQtDeployer.
 
 # This template supports next build targets:
