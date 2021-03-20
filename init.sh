@@ -10,15 +10,15 @@ then
     exit 1
 fi
 
-REPLACESTRING="s+RENAME_ME+$1+g"
+REPLACESTRING="s+CQtDeployerServer+$1+g"
 echo $REPLACESTRING
 
 find . -not -path '*/\.*' -type f -exec sed -i $REPLACESTRING {} +
 find . -not -path '*/\.*' -type f -exec sed -i $REPLACESTRING {} +
 
-find src -type d -name '*RENAME_ME*' -exec sh -c 'x="{}"; NEWSTR=$(echo "$x" | sed "s/RENAME_ME/'$1'/"); mv "$x" "$NEWSTR"' \;
+find src -type d -name '*CQtDeployerServer*' -exec sh -c 'x="{}"; NEWSTR=$(echo "$x" | sed "s/CQtDeployerServer/'$1'/"); mv "$x" "$NEWSTR"' \;
 
-find src -type f -name '*RENAME_ME*' -exec sh -c 'x="{}"; NEWSTR=$(echo "$x" | sed "s/RENAME_ME/'$1'/"); mv "$x" "$NEWSTR"' \;
+find src -type f -name '*CQtDeployerServer*' -exec sh -c 'x="{}"; NEWSTR=$(echo "$x" | sed "s/CQtDeployerServer/'$1'/"); mv "$x" "$NEWSTR"' \;
 set -e
 
 git config -f .gitmodules --get-regexp '^submodule\..*\.path$' |

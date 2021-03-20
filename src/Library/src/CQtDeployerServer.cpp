@@ -5,13 +5,13 @@
 //# of this license document, but changing it is not allowed.
 //#
 
-#include "RENAME_ME.h"
+#include "CQtDeployerServer.h"
 
 
-namespace RENAME_ME {
+namespace CQtDeployerServer {
 
 bool init() {
-    initRENAME_MEResources();
+    initCQtDeployerServerResources();
     return true;
 }
 

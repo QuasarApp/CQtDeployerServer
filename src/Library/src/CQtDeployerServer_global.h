@@ -5,16 +5,16 @@
 //# of this license document, but changing it is not allowed.
 //#
 
-#ifndef RENAME_ME_GLOBAL_H
-#define RENAME_ME_GLOBAL_H
+#ifndef CQtDeployerServer_GLOBAL_H
+#define CQtDeployerServer_GLOBAL_H
 
 #include <QtCore/qglobal.h>
 
-#if defined(RENAME_ME_LIBRARY)
-#  define RENAME_ME_EXPORT Q_DECL_EXPORT
+#if defined(CQtDeployerServer_LIBRARY)
+#  define CQtDeployerServer_EXPORT Q_DECL_EXPORT
 #else
-#  define RENAME_ME_EXPORT Q_DECL_IMPORT
+#  define CQtDeployerServer_EXPORT Q_DECL_IMPORT
 #endif
 
-#endif //RENAME_ME_GLOBAL_H
+#endif //CQtDeployerServer_GLOBAL_H
 
