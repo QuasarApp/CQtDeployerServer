@@ -22,4 +22,4 @@ include(../CMake/Version.cmake)
 include(../CMake/tr.cmake)
 
 add_subdirectory(Library)
-add_subdirectory(Example)
+add_subdirectory(Server)
