@@ -30,5 +30,3 @@ endif()
 
 initAll()
 
-addDoc(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/doxygen.conf)
-addDeployFromCustomFile("CQtDeployerServer" "${CMAKE_CURRENT_SOURCE_DIR}/Deploy/CQtDeployerServer.json")

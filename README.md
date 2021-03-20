@@ -1,9 +1,6 @@
-# CMakeProject
-Template repository for cmake project
-Fork me and replase CQtDeployerServer to Name of your new project.
-
-1. Clone this repository 
-2. Run ./init.sh NewProjectName 
+# CQtDeployerServer
+This is temp repository for solve the task 415 of The CQtDeployer.
+After finishing of the developing, this repository will be unite with the main repository of the CQtDeployer.
 
 # This template supports next build targets:
 
