@@ -17,9 +17,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-include(../CMake/ProjectOut.cmake)
-include(../CMake/Version.cmake)
-include(../CMake/tr.cmake)
+include(../Heart/QuasarAppLib/CMake/ProjectOut.cmake)
+include(../Heart/QuasarAppLib/CMake/Version.cmake)
+include(../Heart/QuasarAppLib/CMake/tr.cmake)
 
 add_subdirectory(Library)
 add_subdirectory(Server)

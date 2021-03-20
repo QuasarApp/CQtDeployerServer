@@ -18,8 +18,8 @@ set (BUILD_SHARED_LIBS ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Core Test QUIET)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Test QUIET)
 
-include(CMake/ccache.cmake)
-include(CMake/QuasarAppCITargets.cmake)
+include(Heart/QuasarAppLib/CMake/ccache.cmake)
+include(Heart/QuasarAppLib/CMake/QuasarAppCITargets.cmake)
 
 # Add sub directories
 add_subdirectory(src)
