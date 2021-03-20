@@ -8,7 +8,11 @@
 #include "CQtServer.h"
 
 
+/**
+ * @brief CQT This is main namespace of the CQtDeployer Server classes.
+ */
 namespace CQT {
+
 
 bool init() {
     initCQtDeployerServerResources();

@@ -10,6 +10,11 @@ inline void initCQtDeployerServerResources() { Q_INIT_RESOURCE(CQT); }
 
 namespace CQT {
 
+/**
+ * @brief init This function initialize all resource of the CqtSetver library.
+ * @note you should be invoke this method before using the cqt server library.
+ * @return true if the initialize finished successful
+ */
 bool CQtDeployerServer_EXPORT init();
 
 };
