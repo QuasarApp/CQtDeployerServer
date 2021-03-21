@@ -5,22 +5,20 @@
 //# of this license document, but changing it is not allowed.
 //#
 
-#include "idistributor.h"
 #include "iconfiguration.h"
-
 namespace CQT {
 
-iDistributor::~iDistributor() {
-    delete _configuration;
+
+IConfiguration::IConfiguration(const HostConfiguration &hostConfig) {
+    setHostConfig(hostConfig);
 }
 
-bool iDistributor::setConfiguraion(const IConfiguration *config) {
-    if (!config)
-        return false;
+const HostConfiguration &IConfiguration::hostConfig() const {
+    return _hostConfig;
+}
 
-    _configuration = config;
-
-    return true;
+void IConfiguration::setHostConfig(const HostConfiguration &hostConfig) {
+    _hostConfig = hostConfig;
 }
 
 }

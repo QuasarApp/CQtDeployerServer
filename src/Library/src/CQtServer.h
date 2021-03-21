@@ -15,6 +15,6 @@ namespace CQT {
  * @note you should be invoke this method before using the cqt server library.
  * @return true if the initialize finished successful
  */
-bool CQtDeployerServer_EXPORT init();
+bool CQTSERVER_EXPORT init();
 
 };

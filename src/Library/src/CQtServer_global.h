@@ -10,10 +10,10 @@
 
 #include <QtCore/qglobal.h>
 
-#if defined(CQtDeployerServer_LIBRARY)
-#  define CQtDeployerServer_EXPORT Q_DECL_EXPORT
+#if defined(CQTSERVER_LIBRARY)
+#  define CQTSERVER_EXPORT Q_DECL_EXPORT
 #else
-#  define CQtDeployerServer_EXPORT Q_DECL_IMPORT
+#  define CQTSERVER_EXPORT Q_DECL_IMPORT
 #endif
 
 #endif //CQtDeployerServer_GLOBAL_H

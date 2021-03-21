@@ -22,6 +22,8 @@ include(Heart/QuasarAppLib/CMake/ccache.cmake)
 include(Heart/QuasarAppLib/CMake/QuasarAppCITargets.cmake)
 
 # Add sub directories
+set(HEART_BUILD_LVL 0)
+add_subdirectory(Heart)
 add_subdirectory(src)
 if (${QT_VERSION_MAJOR})
     add_subdirectory(tests)
