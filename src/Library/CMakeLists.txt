@@ -36,7 +36,7 @@ set(LANGS ${CMAKE_CURRENT_SOURCE_DIR}/languages/en.ts)
 
 prepareQM(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR} "${LANGS}")
 
-setVersion(0 0 1)
+setVersion(0 1 0)
 
 set(QML_IMPORT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/src" CACHE STRING "Qt Creator extra qml import paths")
 

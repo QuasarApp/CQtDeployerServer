@@ -9,6 +9,7 @@
 #define ICONFIGURATION_H
 #include "CQtServer_global.h"
 #include "hostconfiguration.h"
+#include <streambase.h>
 
 namespace CQT {
 
@@ -16,7 +17,7 @@ namespace CQT {
  * @brief The IConfiguration class This is base interface of all configuration.
  * The configuratin received from the main CQtDeployer application.
  */
-class CQTSERVER_EXPORT IConfiguration
+class CQTSERVER_EXPORT IConfiguration: public QH::StreamBase
 {
 public:
     IConfiguration(const HostConfiguration &hostConfig);
@@ -34,7 +35,20 @@ public:
      */
     void setHostConfig(const HostConfiguration &hostConfig);
 
+    /**
+     * @brief name This method return the name of the configuration.
+     * @return name of the configuration.
+     */
+    virtual const QString& name() const = 0;
+
+protected:
+
+    // StreamBase interface
+    QDataStream &fromStream(QDataStream &stream) override;
+    QDataStream &toStream(QDataStream &stream) const override;
+
 private:
+
     HostConfiguration _hostConfig;
 };
 }

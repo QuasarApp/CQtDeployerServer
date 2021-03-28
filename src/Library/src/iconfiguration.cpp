@@ -21,4 +21,13 @@ void IConfiguration::setHostConfig(const HostConfiguration &hostConfig) {
     _hostConfig = hostConfig;
 }
 
+QDataStream &IConfiguration::fromStream(QDataStream &stream) {
+    return stream;
+}
+
+QDataStream &IConfiguration::toStream(QDataStream &stream) const {
+    return stream;
+
+}
+
 }
