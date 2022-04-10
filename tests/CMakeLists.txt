@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020-2021 QuasarApp.
+# Copyright (C) 2020-2022 QuasarApp.
 # Distributed under the lgplv3 software license, see the accompanying
 # Everyone is permitted to copy and distribute verbatim copies
 # of this license document, but changing it is not allowed.
@@ -9,7 +9,6 @@ cmake_minimum_required(VERSION 3.14)
 
 set(CURRENT_PROJECT ${PROJECT_NAME}Test)
 
-include(../Heart/QuasarAppLib/CMake/ProjectOut.cmake)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
@@ -29,7 +28,7 @@ set(PUBLIC_INCUDE_DIR ${PUBLIC_INCUDE_DIR} "${CMAKE_CURRENT_SOURCE_DIR}/units")
 
 
 add_executable(${CURRENT_PROJECT} ${SOURCE_CPP})
-target_link_libraries(${CURRENT_PROJECT} PRIVATE Qt::Test CQtDeployerServer)
+target_link_libraries(${CURRENT_PROJECT} PRIVATE Qt::Test CQtServer)
 
 target_include_directories(${CURRENT_PROJECT} PUBLIC ${PUBLIC_INCUDE_DIR})
 
