@@ -14,9 +14,9 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
 
 file(GLOB SOURCE_CPP
-    "*.cpp" "*.qrc"
-    "src/*.cpp" "src/*.qrc"
-    "src/Private/*.cpp" "src/Private/*.qrc"
+    "*.cpp" "*.h" "*.qrc"
+    "src/*.cpp" "src/*.h" "src/*.qrc"
+    "src/Private/*.cpp" "src/Private/*.h" "src/Private/*.qrc"
 )
 
 set(PUBLIC_INCUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")

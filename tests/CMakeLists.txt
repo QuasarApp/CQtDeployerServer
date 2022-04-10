@@ -20,8 +20,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 file(GLOB SOURCE_CPP
-    "*.cpp" "*.qrc"
-    "units/*.cpp" "units/*.qrc"
+    "*.cpp" "*.h" "*.qrc"
+    "units/*.cpp" "units/*.h" "units/*.qrc"
 )
 set(PUBLIC_INCUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(PUBLIC_INCUDE_DIR ${PUBLIC_INCUDE_DIR} "${CMAKE_CURRENT_SOURCE_DIR}/units")
