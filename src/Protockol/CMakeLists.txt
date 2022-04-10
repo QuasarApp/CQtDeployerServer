@@ -7,7 +7,7 @@
 
 cmake_minimum_required(VERSION 3.14)
 
-add_definitions(-DCQTSERVER_LIBRARY)
+add_definitions(-DCQTPROTOCKOL_LIBRARY)
 
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
@@ -24,13 +24,12 @@ set(PUBLIC_INCUDE_DIR ${PUBLIC_INCUDE_DIR} "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(PRIVATE_INCUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/Private")
 
 
-add_library(${PROJECT_NAME} ${SOURCE_CPP})
+add_library(cqtProtockol ${SOURCE_CPP})
 
-target_link_libraries(${PROJECT_NAME} PUBLIC Qt::Core cqtProtockol)
+target_link_libraries(cqtProtockol PUBLIC Qt::Core Heart)
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${PUBLIC_INCUDE_DIR})
-target_include_directories(${PROJECT_NAME} PRIVATE ${PRIVATE_INCUDE_DIR})
+target_include_directories(cqtProtockol PUBLIC ${PUBLIC_INCUDE_DIR})
+target_include_directories(cqtProtockol PRIVATE ${PRIVATE_INCUDE_DIR})
 
-setVersion(0 0 1)
-
+setVersionForTarget(cqtProtockol 0 0 1)
 

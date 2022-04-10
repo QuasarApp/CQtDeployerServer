@@ -21,5 +21,7 @@ include(../Heart/QuasarAppLib/CMake/ProjectOut.cmake)
 include(../Heart/QuasarAppLib/CMake/Version.cmake)
 include(../Heart/QuasarAppLib/CMake/tr.cmake)
 
-add_subdirectory(Library)
+add_subdirectory(Protockol)
 add_subdirectory(Server)
+add_subdirectory(ServerStart)
+

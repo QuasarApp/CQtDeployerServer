@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020-2021 QuasarApp.
+# Copyright (C) 2021-2021 QuasarApp.
 # Distributed under the lgplv3 software license, see the accompanying
 # Everyone is permitted to copy and distribute verbatim copies
 # of this license document, but changing it is not allowed.
@@ -7,7 +7,7 @@
 
 cmake_minimum_required(VERSION 3.14)
 
-add_definitions(-DCQTSERVER_LIBRARY)
+set(CURRENT_PROJECT "${PROJECT_NAME}Start")
 
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
@@ -23,20 +23,14 @@ set(PUBLIC_INCUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(PUBLIC_INCUDE_DIR ${PUBLIC_INCUDE_DIR} "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(PRIVATE_INCUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/Private")
 
+add_executable(${CURRENT_PROJECT} ${SOURCE_CPP})
 
-add_library(${PROJECT_NAME} ${SOURCE_CPP})
+if (${QT_VERSION_MAJOR})
+    target_link_libraries(${CURRENT_PROJECT} PUBLIC Qt::Core)
+endif()
+target_link_libraries(${CURRENT_PROJECT} PUBLIC ${PROJECT_NAME})
 
-target_link_libraries(${PROJECT_NAME} PUBLIC Qt::Core Heart)
+target_include_directories(${CURRENT_PROJECT} PUBLIC ${PUBLIC_INCUDE_DIR})
+target_include_directories(${CURRENT_PROJECT} PRIVATE ${PRIVATE_INCUDE_DIR})
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${PUBLIC_INCUDE_DIR})
-target_include_directories(${PROJECT_NAME} PRIVATE ${PRIVATE_INCUDE_DIR})
-
-set(LANGS ${CMAKE_CURRENT_SOURCE_DIR}/languages/en.ts)
-
-
-prepareQM(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR} "${LANGS}")
-
-setVersion(0 0 1)
-
-set(QML_IMPORT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/src" CACHE STRING "Qt Creator extra qml import paths")
 
